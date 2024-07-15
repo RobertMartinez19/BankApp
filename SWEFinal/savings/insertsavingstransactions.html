@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Transaction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d3eaf6; /* Light blue background */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Set minimum height to fill the viewport */
+        }
+        .insert-container {
+            background-color: #fff;
+            padding: 20px; /* Adjusted padding */
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 320px; /* Adjusted width */
+            text-align: left; /* Align left */
+            max-height: 80vh; /* Set maximum height */
+            overflow-y: auto; /* Add scrollbars if needed */
+        }
+        .insert-container h2 {
+            margin-bottom: 20px;
+            color: red;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add text shadow */
+        }
+        .insert-container form label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .insert-container form select,
+        .insert-container form input[type="date"],
+        .insert-container form input[type="number"],
+        .insert-container form input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+        }
+        .insert-container form input[type="submit"] {
+            width: 100%; /* Adjusted width */
+            padding: 10px;
+            background-color: black; /* Black button */
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .insert-container form input[type="submit"]:hover {
+            background-color: #333; /* Darker background on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="insert-container">
+        <h2>Insert Savings Transaction</h2>
+        <form action="insertsavingstransactions.php" method="post">
+            <label for="trans_type">Transaction Type:</label>
+            <select id="trans_type" name="trans_type" required>
+                <option value="Deposit">Deposit</option>
+                <option value="Withdrawal">Withdrawal</option>
+                <option value="Transfer">Transfer</option>
+            </select><br>
+            
+            <label for="trans_date">Transaction Date:</label>
+            <input type="date" id="trans_date" name="trans_date" required><br>
+            
+            <label for="trans_amount">Transaction Amount:</label>
+            <input type="number" id="trans_amount" name="trans_amount" required><br>
+            
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname" required><br>
+            
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname" required><br>
+            
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" required><br>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

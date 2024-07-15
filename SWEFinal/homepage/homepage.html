@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Bank - Homepage</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #d3eaf6; /* Light blue background */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        .logout-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #ff4b5c;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .logout-button:hover {
+            background-color: #ff2c3a;
+        }
+        
+        .account-box {
+            text-align: center;
+            width: 200px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            transition: transform 0.3s;
+        }
+
+        .account-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .account-box img {
+            width: 100px; /* Adjustable size for the image */
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .account-type {
+            font-size: 18px; /* Bigger font size for account type */
+            font-weight: bold;
+            color: #333;
+            margin: 0;
+        }
+        
+        h1 {
+            font-size: 36px; /* Bigger font size for ABC BANK */
+            color: red; /* Red color for ABC BANK */
+            text-align: center;
+            margin-top: 50px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow */
+        }
+        
+        h3 {
+            font-size: 20px; /* Bigger font size for account type labels */
+            color: #333;
+            text-align: center;
+        }
+
+        .bank-logo {
+            width: 50px; /* Adjustable size for the bank logo */
+            height: auto;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <button class="logout-button" onclick="location.href='../login and register/login.html'">Logout</button>
+
+    <h1><img class="bank-logo" src="https://png.pngtree.com/png-vector/20190215/ourmid/pngtree-vector-bank-icon-png-image_532993.jpg" alt="Bank Logo">ABC BANK</h1> <!-- ABC BANK header with bank logo -->
+    <h3>Choose an Account Type:</h3>
+    <div class="account-box" onclick="location.href='../savings/savings.html'">
+        <img src="https://i.etsystatic.com/18338096/r/il/f9bee5/2176328208/il_570xN.2176328208_jiaj.jpg" alt="Savings Icon">
+        <p class="account-type">Savings Account</p>
+    </div>
+    <div class="account-box" onclick="location.href='../checkings/checkings.html'">
+        <img src="https://www.oneazcu.com/media/3729/checking_2_benefits_500x500.png" alt="Checkings Icon">
+        <p class="account-type">Checkings Account</p>
+    </div>
+    <div class="account-box" onclick="location.href='../investments/investments.html'">
+        <img src="https://static.vecteezy.com/system/resources/previews/019/543/298/original/opening-investment-account-color-icon-illustration-vector.jpg" alt="Investments Icon">
+        <p class="account-type">Investments Account</p>
+    </div>
+
+</body>
+</html>

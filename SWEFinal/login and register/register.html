@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d3eaf6; /* Light blue background */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .register-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .register-container h1 {
+            font-size: 24px; /* Adjust font size */
+            margin-bottom: 20px;
+        }
+        .register-container h1 img {
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        .register-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .register-container form input[type="text"],
+        .register-container form input[type="password"],
+        .register-container form input[type="email"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+        }
+        .register-container form input[type="submit"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            background-color: black; /* Black button */
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .register-container form input[type="submit"]:hover {
+            background-color: #333; /* Darker background on hover */
+        }
+        .register-container p {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #333;
+        }
+        .register-container p a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .register-container p a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <h1><img src="https://png.pngtree.com/png-vector/20190215/ourmid/pngtree-vector-bank-icon-png-image_532993.jpg" alt="Bank Logo" width="50">ABC BANK</h1> <!-- ABC BANK header with bank logo -->
+        <h2>Register</h2>
+        <form action="register.php" method="post">
+            <input type="text" id="username" name="username" placeholder="Username" required><br>
+            <input type="password" id="password" name="password" placeholder="Password" required><br>
+            <input type="text" id="lastname" name="lastname" placeholder="Last Name" required><br>
+            <input type="text" id="firstname" name="firstname" placeholder="First Name" required><br>
+            <input type="text" id="address" name="address" placeholder="Address" required><br>
+            <input type="email" id="email" name="email" placeholder="Email" required><br>
+            <input type="text" id="phone" name="phone" placeholder="Phone" required><br>
+            <input type="text" id="test_question" name="test_question" placeholder="Test Question" required><br>
+            <input type="text" id="test_answer" name="test_answer" placeholder="Test Answer" required><br>
+            <input type="text" id="user_type" name="user_type" placeholder="User Type" required><br><br>
+            <input type="submit" value="Register">
+        </form>
+        <p>Already have an account? <a href="login.html">Login</a></p>
+    </div>
+</body>
+</html>
+
